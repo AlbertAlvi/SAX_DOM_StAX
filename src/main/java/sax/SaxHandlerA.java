@@ -11,7 +11,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-public class SaxHandler1 extends DefaultHandler {
+public class SaxHandlerA extends DefaultHandler {
     private BibliographyFlag flag = null;
     private int qtdAuthor = 0;
     private String tempTitle = null;
@@ -57,7 +57,7 @@ public class SaxHandler1 extends DefaultHandler {
     public static void main(String[] args) {
 
         File file = new File("./src/main/resources/bibliography.xml");
-        SaxHandler1 handler = new SaxHandler1();
+        SaxHandlerA handler = new SaxHandlerA();
 
         SAXParserFactory factory = SAXParserFactory.newInstance();
         try {

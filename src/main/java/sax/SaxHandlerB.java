@@ -13,8 +13,8 @@ import org.xml.sax.helpers.DefaultHandler;
 
 // import ldd.BibliographyFlag;
 
-public class SaxHandler2 extends DefaultHandler {
-    private BibliographyFlag flag = null;
+public class SaxHandlerB extends DefaultHandler {
+//    private BibliographyFlag flag = null;
     private int qtdAuthor = 0;
     private int qtdBook = 0;
 
@@ -45,7 +45,7 @@ public class SaxHandler2 extends DefaultHandler {
 
     public static void main(String[] args) {
         File file = new File("./src/main/resources/bibliography.xml");
-        SaxHandler2 handler = new SaxHandler2();
+        SaxHandlerB handler = new SaxHandlerB();
 
         SAXParserFactory factory = SAXParserFactory.newInstance();
         try {

@@ -11,7 +11,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-public class SaxHandler3 extends DefaultHandler {
+public class SaxHandlerC extends DefaultHandler {
 	private boolean bBook = false;
 	private boolean bPrice = false;
 	private double prices = 0;
@@ -50,7 +50,7 @@ public class SaxHandler3 extends DefaultHandler {
 
 	public static void main(String[] args) {
 		File file = new File("./src/main/resources/bibliography.xml");
-		SaxHandler3 handler = new SaxHandler3();
+		SaxHandlerC handler = new SaxHandlerC();
 
 		try {
 			SAXParser parser = SAXParserFactory.newInstance().newSAXParser();
