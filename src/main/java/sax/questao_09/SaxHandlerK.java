@@ -1,9 +1,10 @@
-package sax;
+package sax.questao_09;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -15,49 +16,39 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-public class SaxHandlerN {
+public class SaxHandlerK {
 
 	public static void main(String[] args) {
 		DefaultHandler handler = new DefaultHandler() {
-			private Map<Integer, List<String>> map = new HashMap<>();
-			private String title = null;
-			private int year = 0;
-			private boolean bYear = false;
-			private boolean bTitle = false;
+			private boolean bAuthor = false;
+			private Map<String, Integer> map = new HashMap<>();
 			
 			@Override
 			public void startElement(String uri, String localName, String qName, Attributes attributes)
 					throws SAXException {
-				if(qName.equals("title")) {
-					bTitle = true;
-				} else if(qName.equals("year")) {
-					bYear = true;
+				if(qName.equals("author")) {
+					bAuthor = true;
 				}
 			}
 			
 			@Override
 			public void characters(char[] ch, int start, int length) throws SAXException {
-				if(bTitle) {
-					title = new String(ch, start, length);
-					bTitle = false;
-				} else if(bYear) {
-					year = Integer.parseInt(new String(ch, start, length));
-					bYear = false;
-				}
-			}
-			
-			@Override
-			public void endElement(String uri, String localName, String qName) throws SAXException {
-				if(qName.equals("book")) {
-					List<String> temp = map.getOrDefault(year, new ArrayList<>());
-					temp.add(title);
-					map.put(year, temp);
+				if(bAuthor) {
+					String name = new String(ch, start, length);
+					map.put(name, map.getOrDefault(name, 0) + 1);
+					bAuthor = false;
 				}
 			}
 			
 			@Override
 			public void endDocument() throws SAXException {
-				map.forEach((k, v) -> System.out.printf("%d: %s (%d) \n", k, v, v.size()));
+				int max = map.values().stream().max(Integer::compareTo).get();
+				map.keySet().stream().forEach((author) -> {
+					if(map.get(author) == max) {
+						System.out.printf("%s, ", author);
+					}
+				});
+				System.out.println("(max: " + max + ")");
 			}
 		};
 		
@@ -69,7 +60,6 @@ public class SaxHandlerN {
 		} catch (ParserConfigurationException | SAXException | IOException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 }
