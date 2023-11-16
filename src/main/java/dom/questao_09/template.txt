@@ -1,0 +1,25 @@
+import java.io.File;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathFactory;
+
+import org.w3c.dom.Document;
+
+public class DomBuilder {
+
+	public static void main(String[] args) {
+		try {
+			File file = new File("./src/main/resources/bibliography.xml");
+			Document doc = DocumentBuilderFactory.newInstance()
+					.newDocumentBuilder().parse(file);
+			
+			XPath xPath = XPathFactory.newInstance().newXPath();
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}
