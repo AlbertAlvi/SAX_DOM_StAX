@@ -71,8 +71,8 @@ public class DomBuilderA {
     	transformer.setOutputProperty(OutputKeys.INDENT, "yes");
         
     	DOMSource source = new DOMSource(xml);
-    	
     	StreamResult file = new StreamResult(new File("./xmls/q11A_dudes.xml"));
+    	
     	transformer.transform(source, file);
     }
     
