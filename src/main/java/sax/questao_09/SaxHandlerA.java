@@ -11,6 +11,8 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+import utility_classes.BibliographyFlag;
+
 public class SaxHandlerA extends DefaultHandler {
     private BibliographyFlag flag = null;
     private int qtdAuthor = 0;

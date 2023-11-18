@@ -14,8 +14,11 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import utility_classes.NodeListConverter;
 
 public class DomBuilderH {
 
@@ -29,7 +32,7 @@ public class DomBuilderH {
 			NodeList nl = (NodeList) xPath.compile("//book/title[@lang = 'pt-br']")
 					.evaluate(doc, XPathConstants.NODESET);
 			
-			Set<Node> collection = (Set<Node>) NodeListConverter.toCollection(nl, HashSet::new);
+			Set<Element> collection = (Set<Element>) NodeListConverter.toElementCollection(nl, HashSet::new);
 			Set<String> bookSet = collection.stream()
 					.map(Node::getTextContent)
 					.collect(Collectors.toCollection(HashSet::new));

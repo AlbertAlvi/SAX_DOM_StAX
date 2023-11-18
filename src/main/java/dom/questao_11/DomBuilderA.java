@@ -24,7 +24,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import dom.questao_09.NodeListConverter;
+import utility_classes.NodeListConverter;
 
 public class DomBuilderA {
 	public static void main(String[] args) throws Exception {
@@ -36,7 +36,7 @@ public class DomBuilderA {
         NodeList nodes = (NodeList) xpath.compile("//entry")
         	.evaluate(oldDoc, XPathConstants.NODESET);
         
-        Set<Node> entrySet = (Set<Node>) NodeListConverter.toCollection(nodes, HashSet::new);
+        Set<Element> entrySet = (Set<Element>) NodeListConverter.toElementCollection(nodes, HashSet::new);
         Set<String> nameSet = new TreeSet<>(new DiedComparator());
         
         entrySet.stream()

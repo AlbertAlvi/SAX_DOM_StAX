@@ -1,4 +1,4 @@
-package sax.questao_09;
+package utility_classes;
 
 public enum BibliographyFlag {
     TITLE, AUTHOR, PRICE;
