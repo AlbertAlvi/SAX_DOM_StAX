@@ -14,16 +14,17 @@
 	</properties>-->
 
 	<dependencies>
-		<dependency>
+		<!--<dependency>
 			<groupId>sax</groupId>
 			<artifactId>sax</artifactId>
 			<version>2.0.1</version>
-		</dependency>
-		<dependency>
+		</dependency>-->
+		<!-- org.w3c already in JDK9+ -->
+		<!-- <dependency>
 			<groupId>org.w3c</groupId>
 			<artifactId>dom</artifactId>
 			<version>2.3.0-jaxb-1.0.6</version>
-		</dependency>
+		</dependency>-->
 		<!-- missing artifact id ?? -->
 		<!--<dependency>
 			<groupId>net.sf.saxon</groupId>
