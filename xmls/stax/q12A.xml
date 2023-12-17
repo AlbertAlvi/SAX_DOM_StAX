@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jogos>
+   <jogo>
+      <mandante>
+         <time>Sampaio Corrêa</time>
+         <gols>5</gols>
+      </mandante>
+      <visitante>
+         <time>Paraná</time>
+         <gols>3</gols>
+      </visitante>
+   </jogo>
+   <jogo>
+      <mandante>
+         <time>Vila Nova</time>
+         <gols>3</gols>
+      </mandante>
+      <visitante>
+         <time>ABC</time>
+         <gols>5</gols>
+      </visitante>
+   </jogo>
+</jogos>
