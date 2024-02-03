@@ -1,4 +1,4 @@
-## Repositótio criado para guardar anotações de uso de três APIs usadas no processamento de XML em Java:
+## Repositótio criado para guardar anotações de uso de três APIs empregadas no processamento de XML em Java:
 - SAX
 - DOM
 - StAX
