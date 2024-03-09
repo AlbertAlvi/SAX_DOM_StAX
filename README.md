@@ -1,6 +1,7 @@
-## Repositótio criado para guardar anotações de uso de três APIs empregadas no processamento de XML em Java:
-- SAX
-- DOM
-- StAX
+## Repository created to store notes on the use of three APIs used in XML processing for Java:
 
-### Também possui exemplos quanto ao uso de JAXB para representar arquivos XML como classes Java.
+- **SAX**: Simple API for XML 
+- **DOM**: Document Object Model
+- **StAX**: Streaming API for XML
+
+### It also has examples on the use of JAXB (Java Architecture for XML Binding) to represent XML files as Java classes.
