@@ -4,4 +4,4 @@
 - **DOM**: Document Object Model
 - **StAX**: Streaming API for XML
 
-### It also has examples on the use of JAXB (Java Architecture for XML Binding) to represent XML files as Java classes.
+It also has examples on the use of JAXB (Java Architecture for XML Binding) to represent XML files as Java classes.
